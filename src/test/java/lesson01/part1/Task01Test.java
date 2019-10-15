@@ -17,8 +17,8 @@ public class Task01Test {
         SystemOutGatewayUtil.setCustomOut();
         Task01.main(null);
         ByteArrayOutputStream outputStream = SystemOutGatewayUtil.getOutputArray();
-        String cleanStr = outputStream.toString().replaceAll("\r\n", "");
-        assertTrue(cleanStr.equals("Hello World!"));
+        String cleanStr = outputStream.toString().replaceAll("\r", "");
+        assertTrue(cleanStr.equals("Hello World!\n"));
     }
 
 }
