@@ -20,6 +20,17 @@ public class Task17 {
 
     }
 
-//add interfaces here - добавь интерфейсы тут
+    //add interfaces here - добавь интерфейсы тут
+    public interface CanFly{
+        int getMaxSpeed();
+    }
+
+    public interface CanRun{
+        int getMaxSpeed();
+    }
+
+    public interface CanSwim{
+        int getMaxSpeed();
+    }
 
 }

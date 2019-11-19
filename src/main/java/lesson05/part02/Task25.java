@@ -34,8 +34,25 @@ public class Task25 {
 
     public static String getObjectType(Object o) {
         //напишите тут ваш код
-
-        return "Животное";
+        String text = "Животноe";
+        switch (o.getClass().getSimpleName()){
+            case "Cat":
+                text="Кот";
+                break;
+            case "Tiger":
+                text="Тигр";
+                break;
+            case "Lion":
+                text="Лев";
+                break;
+            case "Bull":
+                text="Бык";
+                break;
+            case "Cow":
+                text="Корова";
+                break;
+        }
+        return text;
     }
 
     public static class Cat extends Animal   //<--Классы наследуются!!

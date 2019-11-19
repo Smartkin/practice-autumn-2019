@@ -19,4 +19,11 @@ public class Task06 {
     }
 
     //Напишите тут ваши методы
+    public static void print(int num){
+        System.out.println(num);
+    }
+
+    public static void print(String s){
+        System.out.println(s);
+    }
 }

@@ -29,8 +29,22 @@ public class Task24 {
 
     public static String getObjectType(Object o) {
         //напишите тут ваш код
-
-        return "Животное";
+        String text = "Животноe";
+        switch (o.getClass().getSimpleName()){
+            case "Cat":
+                text="Кот";
+                break;
+            case "Tiger":
+                text="Тигр";
+                break;
+            case "Lion":
+                text="Лев";
+                break;
+            case "Bull":
+                text="Бык";
+                break;
+        }
+        return text;
     }
 
     public static class Cat {

@@ -24,8 +24,19 @@ public class Task05 {
 
     public static String getObjectType(Object o) {
         //Напишите тут ваше решение
-
-        return "Неизвестное животное";
+        String text = "Неизвестное животноe";
+        switch (o.getClass().getSimpleName()){
+            case "Cow":
+                text="Корова";
+                break;
+            case "Dog":
+                text="Собака";
+                break;
+            case "Whale":
+                text="Кит";
+                break;
+        }
+        return text;
     }
 
     public static class Cow {

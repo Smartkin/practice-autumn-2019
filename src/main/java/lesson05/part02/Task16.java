@@ -19,5 +19,8 @@ public class Task16 {
     }
 
     //add an interface here - добавь интерфейс тут
-
+    public interface CanFly{
+        int getMaxSpeed();
+        String getName();
+    }
 }

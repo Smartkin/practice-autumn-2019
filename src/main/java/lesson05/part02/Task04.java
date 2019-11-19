@@ -25,6 +25,19 @@ public class Task04 {
 
     public static void printObjectType(Object o) {
         //Напишите тут ваше решение
+        String text = "Кошка";
+        switch (o.getClass().getSimpleName()){
+            case "Bird":
+                text="Птица";
+                break;
+            case "Dog":
+                text="Собака";
+                break;
+            case "Lamp":
+                text="Лампа";
+                break;
+        }
+        System.out.println(text);
     }
 
     public static class Cat {

@@ -16,8 +16,16 @@ package lesson05.part02;
 
 public class Task07 {
     public static void main(String[] args) {
-
+        print(4);
+        print(Integer.valueOf(10));
     }
 
     //Напишите тут ваши методы
+    public static void print(int num){
+        System.out.println(num);
+    }
+
+    public static void print(Integer num){
+        System.out.println(num);
+    }
 }

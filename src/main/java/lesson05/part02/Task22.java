@@ -41,6 +41,9 @@ public class Task22 {
     }
 
     public static class Cat extends Pet {
-
+        @Override
+        public void setName(String name) {
+            super.setName("Я - кот");
+        }
     }
 }

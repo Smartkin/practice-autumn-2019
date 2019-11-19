@@ -18,4 +18,23 @@ public class Task08 {
     }
 
     //Напишите тут ваши методы
+    public static void print(int num){
+        System.out.println(num);
+    }
+
+    public static void print(float f){
+        System.out.println(f);
+    }
+
+    public static void print(double d){
+        System.out.println(d);
+    }
+
+    public static void print(String s){
+        System.out.println(s);
+    }
+
+    public static void print(Character c){
+        System.out.println(c);
+    }
 }
