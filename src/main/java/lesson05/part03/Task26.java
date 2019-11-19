@@ -1,5 +1,10 @@
 package lesson05.part03;
 
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.Scanner;
+
 /**
  * Сортировка четных чисел из файла
  * 1. Ввести имя файла с консоли.
@@ -32,7 +37,19 @@ package lesson05.part03;
  */
 
 public class Task26 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // напишите тут ваш код
+        Scanner scanner = new Scanner(System.in);
+        FileInputStream fis = new FileInputStream(scanner.nextLine());
+        BufferedReader br = new BufferedReader(new FileReader(fis.getFD()));
+        int num = Integer.parseInt(br.readLine());
+        ArrayList<Integer> numList = new ArrayList<>();
+        String line;
+        while((line = br.readLine()) != null){
+            num = Integer.parseInt(line);
+            if (num % 2 == 0) numList.add(num);
+        }
+        numList.sort(Comparator.comparingInt(n -> n));
+        numList.forEach(System.out::println);
     }
 }

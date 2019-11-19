@@ -28,13 +28,13 @@ public class Task10 {
         boolean wantsToGetExtraWork();
     }
 
-    interface Secretary {
+    interface Secretary extends Person {
     }
 
-    interface Boss {
+    interface Boss extends Workable, Person {
     }
 
-    class CleverMan {
+    class CleverMan implements Boss {
         public void use(Person person) {
             person.startToWork();
         }
@@ -47,7 +47,7 @@ public class Task10 {
         }
     }
 
-    class SmartGirl {
+    class SmartGirl implements Secretary {
         public void use(Person person) {
         }
 

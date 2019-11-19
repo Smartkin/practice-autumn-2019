@@ -24,9 +24,14 @@ public class Task13 {
         Color getColor();
     }
 
-    public static class Fox {
+    public static class Fox implements Animal {
         public String getName() {
             return "Fox";
+        }
+
+        @Override
+        public Color getColor() {
+            return Color.ORANGE;
         }
     }
 }

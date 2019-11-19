@@ -1,5 +1,10 @@
 package lesson05.part03;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Scanner;
+
 /**
  * Чтение файла
  * 1. Считать с консоли имя файла.
@@ -17,5 +22,23 @@ package lesson05.part03;
 public class Task18 {
     public static void main(String[] args) {
         // напишите тут ваш код
+        Scanner scanner = new Scanner(System.in);
+        FileInputStream fis = null;
+        try {
+            fis = new FileInputStream(scanner.nextLine());
+            int b = 0;
+            while((b = fis.read()) != -1){
+                System.out.print((char)b);
+            }
+        } catch (IOException e){
+            e.printStackTrace();
+        } finally {
+            try {
+                fis.close();
+            }
+            catch (IOException e){
+                e.printStackTrace();
+            }
+        }
     }
 }

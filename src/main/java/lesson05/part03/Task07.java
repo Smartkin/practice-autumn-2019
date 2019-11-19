@@ -20,7 +20,11 @@ public class Task07 {
         SimpleObject<T> getInstance();
     }
 
-    class StringObject //допишите здесь ваш код
+    class StringObject implements SimpleObject //допишите здесь ваш код
     {
+        @Override
+        public SimpleObject getInstance() {
+            return new StringObject();
+        }
     }
 }

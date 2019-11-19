@@ -1,5 +1,10 @@
 package lesson05.part03;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
 /**
  * Писатель в файл с консоли
  * 1. Прочесть с консоли имя файла.
@@ -18,7 +23,18 @@ package lesson05.part03;
  */
 
 public class Task19 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         // напишите тут ваш код
+        Scanner scanner = new Scanner(System.in);
+        FileWriter fileWriter = new FileWriter(scanner.nextLine());
+        BufferedWriter writer = new BufferedWriter(fileWriter);
+        String line = "";
+        while(!(line = scanner.nextLine()).equals("exit")){
+            writer.write(line);
+            writer.write("\n");
+        }
+
+        writer.close();
+        fileWriter.close();
     }
 }

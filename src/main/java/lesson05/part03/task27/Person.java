@@ -1,12 +1,16 @@
 package lesson05.part03.task27;
 
-public class Person {
+public class Person implements RepkaItem {
     private String name;
     private String namePadezh;
 
     public Person(String name, String namePadezh) {
         this.name = name;
         this.namePadezh = namePadezh;
+    }
+
+    public void pull(Person person){
+        System.out.println(name + " за " + person.namePadezh);
     }
 
     public String getName() {
