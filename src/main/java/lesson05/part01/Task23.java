@@ -29,8 +29,14 @@ public class Task23 {
         }
 
         // напишите тут ваш код
+        int min = inputArray[0];
+        int max = min;
+        for(int i = 1; i < inputArray.length; ++i){
+            if (inputArray[i] > max) max = inputArray[i];
+            else if (inputArray[i] < min) min = inputArray[i];
+        }
 
-        return new Pair<Integer, Integer>(0, 0);
+        return new Pair<Integer, Integer>(min, max);
     }
 
     public static class Pair<X, Y> {

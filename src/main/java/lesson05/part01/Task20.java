@@ -18,7 +18,7 @@ public class Task20 {
     public static void main(String[] args) {
     }
 
-    public class House {
+    public class House extends Asset {
 
     }
 
@@ -26,7 +26,7 @@ public class Task20 {
 
     }
 
-    public class Car {
+    public class Car extends Asset {
 
     }
 

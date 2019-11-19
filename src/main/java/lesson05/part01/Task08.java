@@ -17,9 +17,9 @@ public class Task08 {
     }
 
     public class Cat {
-        public String name;
-        public int age;
-        public int weight;
+        private String name;
+        private int age;
+        private int weight;
 
         public Cat(String name, int age, int weight) {
             this.name = name;
@@ -31,7 +31,7 @@ public class Task08 {
             return name;
         }
 
-        public void setName(String name) {
+        private void setName(String name) {
             this.name = name;
         }
 
@@ -39,7 +39,7 @@ public class Task08 {
             return age;
         }
 
-        public void setAge(int age) {
+        private void setAge(int age) {
             this.age = age;
         }
     }
